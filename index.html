@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Textbox</title>
+    <title>Random Action Textbox</title>
     <style>
         body {
             display: flex;
@@ -36,12 +36,64 @@
                 color: black;
             }
         }
+        .shake {
+            animation: shake 0.5s;
+            animation-iteration-count: 1;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
     </style>
 </head>
 <body>
     <div>
-        <input type="text" id="textbox" placeholder="Type something...">
+        <input type="text" id="textbox" placeholder="Type something..." aria-label="Input text">
         <span class="blinking-cursor">|</span>
     </div>
+    <script>
+        const textbox = document.getElementById('textbox');
+
+        // Function to execute a random action
+        function randomAction() {
+            const actions = [
+                () => alert('Hello! You typed: ' + textbox.value), // Show an alert
+                () => document.body.style.backgroundColor = getRandomColor(), // Change background color
+                () => textbox.classList.add('shake'), // Make the textbox shake
+                () => alert('Random fact: The Eiffel Tower can be 15 cm taller during the summer!'), // Display a random fact
+                () => document.body.style.transform = 'rotate(' + Math.floor(Math.random() * 360) + 'deg)' // Rotate the page
+            ];
+
+            // Pick a random action and execute it
+            const randomIndex = Math.floor(Math.random() * actions.length);
+            actions[randomIndex]();
+
+            // Remove shake class after animation ends
+            setTimeout(() => {
+                textbox.classList.remove('shake');
+            }, 500);
+        }
+
+        // Function to get a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Event listener for "Enter" key press
+        textbox.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                randomAction();
+                textbox.value = ''; // Clear the textbox after pressing Enter
+            }
+        });
+    </script>
 </body>
 </html>
