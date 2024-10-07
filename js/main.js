@@ -59,3 +59,14 @@ textbox.addEventListener('keydown', (event) => {
         textbox.value = ''; // Clear the textbox after pressing Enter
     }
 });
+
+textbox.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        randomAction();
+        textbox.value = ''; // Clear the textbox after pressing Enter
+
+        // Update score and track actions
+        updateScore(10);
+        trackAction();
+    }
+});

@@ -1,0 +1,36 @@
+#score-display, #level-display {
+    position: fixed;
+    top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ffffffb0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#level-display {
+    right: 10px;
+    left: unset;
+}
+
+#score-display {
+    left: 10px;
+}
+
+.achievement {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    animation: fadeInOut 5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
