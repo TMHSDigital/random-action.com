@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Textbox</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #textbox {
+            border: none;
+            border-bottom: 2px solid black;
+            outline: none;
+            font-size: 24px;
+            width: 400px;
+            background: none;
+        }
+        .blinking-cursor {
+            font-weight: 100;
+            font-size: 24px;
+            color: black;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to {
+                color: transparent;
+            }
+            50% {
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="textbox" placeholder="Type something...">
+        <span class="blinking-cursor">|</span>
+    </div>
+</body>
+</html>
