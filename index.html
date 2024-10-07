@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Action Textbox</title>
+    <link rel="stylesheet" href="css/gamification.css">
     <style>
         body {
             display: flex;
@@ -50,10 +51,19 @@
     </style>
 </head>
 <body>
+    <!-- Gamification Display Elements -->
+    <div id="score-display">Score: 0</div>
+    <div id="level-display">Level: 1</div>
+
+    <!-- Main Input Area -->
     <div>
         <input type="text" id="textbox" placeholder="Type something..." aria-label="Input text">
         <span class="blinking-cursor">|</span>
     </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/gamification.js"></script>
+    <script src="js/main.js"></script>
     <script>
         const textbox = document.getElementById('textbox');
 
@@ -92,6 +102,10 @@
             if (event.key === 'Enter') {
                 randomAction();
                 textbox.value = ''; // Clear the textbox after pressing Enter
+
+                // Update score and track actions
+                updateScore(10);
+                trackAction();
             }
         });
     </script>
