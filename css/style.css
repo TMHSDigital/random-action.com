@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+}
+#textbox {
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 24px;
+    width: 400px;
+    background: none;
+}
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 24px;
+    color: black;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+}
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

@@ -1,0 +1,45 @@
+
+    Directory: E:\clones\random-action.com
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           10/7/2024  5:19 PM                audio
+d----           10/7/2024  5:19 PM                css
+d----           10/7/2024  5:19 PM                images
+d----           10/7/2024  5:19 PM                js
+-a---           10/7/2024  5:17 PM           3358 index.html
+-a---           10/7/2024  5:17 PM          11558 LICENSE
+-a---           10/7/2024  5:17 PM             40 README.md
+-a---           10/7/2024  5:21 PM            217 structure.txt
+
+    Directory: E:\clones\random-action.com\css
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           10/7/2024  5:20 PM            899 style.css
+
+    Directory: E:\clones\random-action.com\js
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           10/7/2024  5:20 PM           1902 main.js
+-a---           10/7/2024  5:20 PM           1098 particles-config.json
+-a---           10/7/2024  5:19 PM              0 particles.js
+
+    Directory: E:\clones\random-action.com\images
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           10/7/2024  5:20 PM              0 gif1.gif
+-a---           10/7/2024  5:20 PM              0 gif2.gif
+-a---           10/7/2024  5:20 PM              0 gif3.gif
+
+    Directory: E:\clones\random-action.com\audio
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           10/7/2024  5:20 PM              0 sound1.mp3
+-a---           10/7/2024  5:20 PM              0 sound2.mp3
+-a---           10/7/2024  5:20 PM              0 sound3.mp3
+-a---           10/7/2024  5:21 PM             94 sounds.json
+
